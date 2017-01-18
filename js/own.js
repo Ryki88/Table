@@ -53,18 +53,18 @@ $(document).ready(function ()
             };
             var dataAdapter = new $.jqx.dataAdapter(source);
        
-            $("#jqxgrid").jqxGrid(
+            $("#jqxgrid").jqxGrid( // Dit is de table die je aanroept 
             {
-                width: 850,
+                width: 850, // breedte van het table
                 source: dataAdapter,
-                columnsresize: true,
+                columnsresize: true, // collom breedte mogen aangepast worden
                 columns: [
-                  { text: 'Voornaam', datafield: 'Voornaam', width: 120 },
-                  { text: 'Achternaam', datafield: 'Achternaam', width: 120 },
-                  { text: 'Biersoort', datafield: 'productname', width: 240 },
-                  { text: 'Aantal', datafield: 'quantity', width: 80, cellsalign: 'right' },
-                  { text: 'Prijs per bier', datafield: 'price', width: 90, cellsalign: 'right', cellsformat: 'c2' },
-                  { text: 'Total', datafield: 'total', cellsalign: 'right', cellsformat: 'c2' }
+                  { text: 'Voornaam', datafield: 'Voornaam', width: 120 }, //  Array Voornaam wordt uitgelezen, breedte 120px
+                  { text: 'Achternaam', datafield: 'Achternaam', width: 120 }, //  Array achternaam wordt uitgelezen, breedte 120px
+                  { text: 'Biersoort', datafield: 'productname', width: 240 }, //  Array biersoorten wordt uitgelezen, breedte 120px
+                  { text: 'Aantal', datafield: 'quantity', width: 80, cellsalign: 'right' }, //  Array hoeveelheid wordt uitgelezen, breedte 80px
+                  { text: 'Prijs per bier', datafield: 'price', width: 90, cellsalign: 'right', cellsformat: 'c2' },  //  Array biersoorten wordt uitgelezen, breedte 90px, rechts uitgelijnt
+                  { text: 'Total', datafield: 'total', cellsalign: 'right', cellsformat: 'c2' } //  Array biersoorten wordt uitgelezen, breedte 90px, rechts uitgelijnt
                 ]
             });
 });
